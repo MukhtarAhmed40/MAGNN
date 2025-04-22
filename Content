@@ -1,0 +1,25 @@
+MAGNN/
+├── data/                    # Dataset loading and preprocessing
+│   ├── ctu13.py
+│   ├── iscxvpn2016.py
+│   ├── cicids2017.py
+│   └── dohbrw2020.py
+├── models/                  # Model implementations
+│   ├── magnn.py            # Main MAGNN model
+│   ├── contrastive.py      # Contrastive learning modules
+│   └── attention.py        # Attention mechanisms
+├── utils/                   # Utility functions
+│   ├── augmentation.py     # Graph augmentation
+│   ├── metrics.py          # Evaluation metrics
+│   └── visualization.py    # Visualization tools
+├── configs/                # Configuration files
+│   ├── base.yaml
+│   ├── ctu13.yaml
+│   └── ...
+├── scripts/                # Training/evaluation scripts
+│   ├── train.py
+│   └── evaluate.py
+├── docs/                   # Documentation
+│   └── README.md
+├── requirements.txt        # Python dependencies
+└── LICENSE
