@@ -43,7 +43,8 @@ conda activate magnn
 pip install -r requirements.txt
 
 -----------------------------------------------------------------------------------------
-Requirements:
+
+## Requirements:
 
 Python 3.8+
 
@@ -56,32 +57,36 @@ Scikit-learn
 TQDM
 
 Matplotlib
+----------------------------------------------------------------------------------
+# Dataset
 
-Datasets
+2. [Datasets](#datasets)
+
 MAGNN supports these benchmark datasets:
+___________________________________________________________________________
+Dataset	- Type	- Nodes- 	Edges -	Description
+CTU-13	- Botnet	- IPs -	Flows -	Botnet traffic scenarios
+ISCXVPN2016	- VPN	- Hosts	- Sessions -	Encrypted VPN traffic
+CICIDS2017 -	Intrusion	- IPs	- Connections	- Modern attack scenarios
+CIRA-CIC-DoHBrw-2020	- DoH	- Domains	- Queries	D- NS over HTTPS traffic
+__________________________________________________________________________
+================================================================================
 
-Dataset	Type	Nodes	Edges	Description
-CTU-13	Botnet	IPs	Flows	Botnet traffic scenarios
-ISCXVPN2016	VPN	Hosts	Sessions	Encrypted VPN traffic
-CICIDS2017	Intrusion	IPs	Connections	Modern attack scenarios
-CIRA-CIC-DoHBrw-2020	DoH	Domains	Queries	DNS over HTTPS traffic
-Preprocessing:
+# Preprocessing:
 
-bash
-Copy
 python data/preprocess.py --dataset CTU-13 --output processed/ctu13
-Usage
-Training
-bash
-Copy
+
+# Usage
+
+## Training
+
 python train.py \
   --config configs/ctu13.yaml \
   --data_dir processed/ctu13 \
   --output_dir models/
-Configuration options (see configs/base.yaml):
 
-yaml
-Copy
+#$ Configuration options (see configs/base.yaml):
+
 model:
   hidden_dim: 128       # Hidden dimension size
   num_heads: 4          # Attention heads
@@ -96,115 +101,19 @@ training:
 contrastive:
   temp: 0.1             # Temperature parameter
   augment_ratio: 0.2    # Edge modification ratio
-Evaluation
-bash
-Copy
+
+
+## Evaluation
+
 python evaluate.py \
   --model models/magnn_ctu13.pth \
   --data processed/ctu13/test \
   --output results.json
-Metrics
-MAGNN evaluates both classification and regression performance:
 
-Classification Metrics
-Metric	Formula	Description
-Accuracy	(TP+TN)/(TP+TN+FP+FN)	Overall correctness
-F1-Score	2(PrecisionRecall)/(Precision+Recall)	Harmonic mean of precision/recall
-Error Metrics (Temporal Prediction)
-Metric	Formula	Interpretation
-MAE	
-1
-n
-∑
-∥
-y
-−
-y
-^
-∥
-n
-1
-​
- ∑∥y− 
-y
-^
-​
- ∥	Average error magnitude
-MSE	
-1
-n
-∑
-(
-y
-−
-y
-^
-)
-2
-n
-1
-​
- ∑(y− 
-y
-^
-​
- ) 
-2
- 	Squared error (penalizes large errors)
-RMSE	
-MSE
-MSE
-​
- 	Error in original units
-MAPE	
-100
-%
-n
-∑
-∥
-(
-y
-−
-y
-^
-)
-/
-y
-∥
-n
-100%
-​
- ∑∥(y− 
-y
-^
-​
- )/y∥	Percentage error
-Results
-Reproduction of paper results on CTU-13 dataset:
+# License
 
-Metric	Value	Baseline Comparison
-Accuracy	98.45%	+8.5% over Anomal-E
-F1-Score	97.58%	+7.3% over NEGAT
-RMSE	0.20	-12.4% reduction
-Training Time	18.5s/epoch	2.1x faster than DE-GNN
-Training Curves
-
-Citation
-If you use MAGNN in your research, please cite:
-
-bibtex
-Copy
-@article{ahmed2024magnn,
-  title={MAGNN: Multi-scale adaptive graph neural networks with contrastive learning for malicious network traffic detection},
-  author={Ahmed, Mukhtar and Chen, Jinfu and Akpaku, Ernest and Bux, Ali},
-  journal={Journal of Network and Computer Applications},
-  year={2024},
-  publisher={Elsevier}
-}
-License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Copy
 
 ### Key Features of This README:
 
@@ -241,106 +150,6 @@ To use this README:
 4. Modify results based on your actual experiments
 
 The README follows GitHub best practices while maintaining academic rigor for a research codebase.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Requirements:
-
-Python 3.8+
-
-PyTorch 1.10+
-
-PyTorch Geometric
-
-Scikit-learn
-
-TQDM
-
-Matplotlib
-----------------------------------------------------------------------------------
-## Datasets
-MAGNN supports these benchmark datasets:
-___________________________________________________________________________
-Dataset	- Type	- Nodes- 	Edges -	Description
-CTU-13	- Botnet	- IPs -	Flows -	Botnet traffic scenarios
-ISCXVPN2016	- VPN	- Hosts	- Sessions -	Encrypted VPN traffic
-CICIDS2017 -	Intrusion	- IPs	- Connections	- Modern attack scenarios
-CIRA-CIC-DoHBrw-2020	- DoH	- Domains	- Queries	D- NS over HTTPS traffic
-__________________________________________________________________________
-================================================================================
-## Preprocessing:
-
-python data/preprocess.py --dataset CTU-13 --output processed/ctu13
-
-## Usage
-
-# Training
-
-python train.py \
-  --config configs/ctu13.yaml \
-  --data_dir processed/ctu13 \
-  --output_dir models/
-
-------------------------------------------------------
-
-## Configuration options (see configs/base.yaml):
-
-model:
-  hidden_dim: 128       # Hidden dimension size
-  num_heads: 4          # Attention heads
-  num_layers: 3         # GNN layers
-
-training:
-  epochs: 100           # Training epochs
-  batch_size: 64        # Batch size
-  lr: 0.001             # Learning rate
-  weight_decay: 1e-5    # L2 regularization
-
-contrastive:
-  temp: 0.1             # Temperature parameter
-  augment_ratio: 0.2    # Edge modification ratio
-
----------------------------------------------------------------
-## Evaluation
-
-python evaluate.py \
-  --model models/magnn_ctu13.pth \
-  --data processed/ctu13/test \
-  --output results.json
-==================================================================
-
 
 
 
