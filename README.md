@@ -107,36 +107,6 @@ python evaluate.py \
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-
-## Key Features of This README:
-
-1. Professional Formatting:
-   - Badges for license/python version
-   - Clear section headers
-   - Consistent markdown styling
-
-2. Complete Usage Documentation:
-   - Installation instructions
-   - Dataset preparation
-   - Training/evaluation commands
-   - Configuration options
-
-3. Technical Detail:
-   - Mathematical formulas for metrics
-   - Table comparing different datasets
-   - Results reproduction guidance
-
-4. Visual Elements:
-   - Architecture diagram (placeholder)
-   - Training curves (placeholder)
-   - Metric tables
-
-5. Academic Compliance:
-   - Proper citation format
-   - Clear metric definitions
-   - Baseline comparisons
-
-
 ## Implementation Notes
 
 1. Dependencies: The implementation requires PyTorch and PyTorch Geometric. Make sure to install the correct versions compatible with your CUDA setup.
