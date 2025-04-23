@@ -42,7 +42,6 @@ conda activate magnn
 # Install requirements
 pip install -r requirements.txt
 
------------------------------------------------------------------------------------------
 
 ## Requirements:
 
@@ -54,13 +53,14 @@ PyTorch Geometric
 
 Scikit-learn
 
-TQDM
+Jupyter Notebook
+
+Google colab
 
 Matplotlib
-----------------------------------------------------------------------------------
-# Dataset
 
-2. [Datasets](#datasets)
+
+## Datasets
 
 MAGNN supports these benchmark datasets:
 ___________________________________________________________________________
@@ -70,9 +70,8 @@ ISCXVPN2016	- VPN	- Hosts	- Sessions -	Encrypted VPN traffic
 CICIDS2017 -	Intrusion	- IPs	- Connections	- Modern attack scenarios
 CIRA-CIC-DoHBrw-2020	- DoH	- Domains	- Queries	D- NS over HTTPS traffic
 __________________________________________________________________________
-================================================================================
 
-# Preprocessing:
+## Preprocessing:
 
 python data/preprocess.py --dataset CTU-13 --output processed/ctu13
 
@@ -85,7 +84,7 @@ python train.py \
   --data_dir processed/ctu13 \
   --output_dir models/
 
-#$ Configuration options (see configs/base.yaml):
+## Configuration options (see configs/base.yaml):
 
 model:
   hidden_dim: 128       # Hidden dimension size
@@ -110,12 +109,12 @@ python evaluate.py \
   --data processed/ctu13/test \
   --output results.json
 
-# License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
-### Key Features of This README:
+## Key Features of This README:
 
 1. **Professional Formatting**:
    - Badges for license/python version
