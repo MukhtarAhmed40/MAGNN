@@ -116,37 +116,32 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Key Features of This README:
 
-1. **Professional Formatting**:
+1. Professional Formatting:
    - Badges for license/python version
    - Clear section headers
    - Consistent markdown styling
 
-2. **Complete Usage Documentation**:
+2. Complete Usage Documentation:
    - Installation instructions
    - Dataset preparation
    - Training/evaluation commands
    - Configuration options
 
-3. **Technical Detail**:
+3. Technical Detail:
    - Mathematical formulas for metrics
    - Table comparing different datasets
    - Results reproduction guidance
 
-4. **Visual Elements**:
+4. Visual Elements:
    - Architecture diagram (placeholder)
    - Training curves (placeholder)
    - Metric tables
 
-5. **Academic Compliance**:
+5. Academic Compliance:
    - Proper citation format
    - Clear metric definitions
    - Baseline comparisons
 
-To use this README:
-1. Save as `README.md` in your project root
-2. Add actual images to `docs/` folder
-3. Update URLs and paths as needed
-4. Modify results based on your actual experiments
 
 The README follows GitHub best practices while maintaining academic rigor for a research codebase.
 
