@@ -161,5 +161,13 @@ The README follows GitHub best practices while maintaining academic rigor for a 
 
 
 
+## Contact & Support
+For any questions, feedback, or suggestions, you can contact me:
+
+  Mukhtar Ahmed
+  
+  Email: mukhtar40@gmail.com - 
+  
+    LinkedIn: MukhtarAhmed
 
 
