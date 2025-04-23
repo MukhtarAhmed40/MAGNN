@@ -16,7 +16,7 @@ training:
   lambda_hier: 0.3
 
 data:
-  path: ./data/CTU-13
+  path: ./data/CTU-13/ISCXVPN2016/CICIDS-2017/CIRA-CIC-DoHBrw-2020
   temporal_window: 300
   augment_ratio: 0.2
   restart_prob: 0.3
