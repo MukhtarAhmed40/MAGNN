@@ -46,17 +46,11 @@ pip install -r requirements.txt
 ## Requirements:
 
 - Python 3.8+
-
 - PyTorch 1.10+
-
 - PyTorch Geometric
-
 - Scikit-learn
-
 - Jupyter Notebook
-
 - Google colab
-
 - Matplotlib
 
 
@@ -160,14 +154,17 @@ This implementation provides a complete framework to reproduce the MAGNN model f
 The README follows GitHub best practices while maintaining academic rigor for a research codebase.
 
 
+## Contact
 
-## Contact & Support
-For any questions, feedback, or suggestions, you can contact me:
+For questions about the implementation or dataset preparation:
 
-  Mukhtar Ahmed
-  
-  Email: mukhtar40@gmail.com - 
-  
-    LinkedIn: MukhtarAhmed
+- **Mukhtar Ahmed**  
+  📧 [mukhtar40@gmail.com]  
+  🔗 [LinkedIn Profile](https://www.linkedin.com/in/mukhtarahmed)  
+  🐛 [Report Issues](https://github.com/yourusername/MAGNN/issues)  
+
+*We welcome contributions and research collaborations!*
+
+
 
 
