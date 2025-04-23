@@ -1,9 +1,65 @@
-MAGNN supports the following datasets:
+## Dataset Sources
 
-CTU-13
+MAGNN has been evaluated on these benchmark datasets:
 
-ISCXVPN2016
 
-CICIDS-2017
+1. CTU-13 Dataset:
 
-CIRA-CIC-DoHBrw-2020
+Description: Contains botnet traffic captures from 13 different scenarios with labeled malicious flows
+
+Paper: "An empirical comparison of botnet detection methods" (García et al., 2014)
+
+Download: https://mcfp.felk.cvut.cz/publicDatasets/CTU-13-Dataset/
+
+Format: PCAP files with labeled flows
+
+Preprocessing Script:
+
+python data/preprocess_ctu13.py --input path/to/ctu13 --output processed/ctu13
+
+
+2. ISCXVPN2016 Dataset
+ 
+Description: Contains VPN and non-VPN encrypted traffic for multiple applications
+
+Paper: "Characterization of encrypted and VPN traffic using time-related features" (Draper-Gil et al., 2016)
+
+Download: https://www.unb.ca/cic/datasets/vpn.html
+
+Format: PCAP files with application labels
+
+Preprocessing:
+
+python data/preprocess_iscxvpn.py --input path/to/iscxvpn2016 --output processed/iscxvpn
+
+
+3. CICIDS-2017 Dataset
+
+Description: Comprehensive intrusion detection dataset with benign and modern attack traffic
+
+Paper: "Toward generating a new intrusion detection dataset" (Sharafaldin et al., 2018)
+
+Download: https://www.unb.ca/cic/datasets/ids-2017.html
+
+Format: CSV/PCAP with labeled flows
+
+Preprocessing:
+
+python data/preprocess_cicids.py --input path/to/CICIDS2017 --output processed/cicids
+
+
+4. CIRA-CIC-DoHBrw-2020 Dataset
+Description: Focuses on DNS over HTTPS (DoH) traffic for encrypted DNS analysis
+
+Paper: "Detection of DoH Tunnels using Time-series Classification" (MontazeriShatoori et al., 2020)
+
+Download: https://www.unb.ca/cic/datasets/dohbrw-2020.html
+
+Format: PCAP/CSV with DoH/non-DoH labels
+
+Preprocessing:
+
+python data/preprocess_doh.py --input path/to/DoHBrw2020 --output processed/doh
+
+
+
