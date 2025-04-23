@@ -1,0 +1,7 @@
+Training
+
+python scripts/train.py --config configs/ctu13.yaml
+
+Evaluation
+
+python scripts/evaluate.py --model_path best_model.pt --dataset CTU-13
