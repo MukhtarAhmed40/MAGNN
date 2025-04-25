@@ -130,3 +130,12 @@ if __name__ == "__main__":
         nprocs=world_size,
         join=True
     )
+
+
+
+# Results Analysis:
+
+import numpy as np
+results = torch.load('distributed_results.pt')
+avg_time = np.mean(results['epoch_times'][10:])  # Skip first 10 warmup epochs
+print(f"Average epoch time: {avg_time:.2f}s")
